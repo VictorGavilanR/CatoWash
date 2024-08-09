@@ -7,7 +7,7 @@ const sass = gulpSass(dartSass)
 export function js ( done) {
 
     src('src/js/app.js')
-    .pipe (dest('build/js') )
+        .pipe (dest('build/js') )
 
     done()
 }
