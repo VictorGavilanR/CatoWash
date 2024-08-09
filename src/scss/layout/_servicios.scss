@@ -1,0 +1,62 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.servicios{
+    background-color: #A0DEFF  ;
+    h3 ,.basico{
+        text-align: center;
+        color: v.$blanco;
+    }
+
+    .basico{
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+}
+
+.servicio-contenedor{
+    @include m.contenedor;
+    @include m.tablet{
+        @include m.grid(2);
+    }
+}
+
+.servicio {
+    padding-top: 2rem;
+    .nombre-servicio {
+        font-size: 3rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+
+.lista{
+    @include m.resetear-lista;
+    li{
+        padding: 2.5rem;
+        font-weight: 600;
+
+        span{
+            font-weight: 400;
+
+        }
+    }
+}
+
+.bg-color{
+    background-color: #FFF9D0  ;
+    li:nth-child(odd){
+        background-color: lighten(#FFF9D0 ,4%);
+    }
+
+}
+
+.bg-secundario{
+    background-color: #D4EFDF ;
+    li:nth-child(odd){
+        background-color: lighten(#D4EFDF ,5%);
+    }
+
+}

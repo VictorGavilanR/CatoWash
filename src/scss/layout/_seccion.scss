@@ -1,0 +1,24 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.sobre-nosotros{
+    @include m.contenedor;
+    @include m.tablet{
+        align-items: center;
+        flex-direction: row;
+        @include m.grid(2);
+
+    }
+}
+
+.contenido-section{
+    margin-top: 3rem;
+    h2{
+        margin-bottom: 2rem;
+    }
+    .fecha {
+        color: #26C6DA;
+        font-weight: 700;
+    }
+}

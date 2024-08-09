@@ -1,0 +1,64 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.video {
+    position: relative;
+    min-height: 25rem;
+    max-height: 70rem;
+    overflow: hidden;
+    .overlay{
+        position: absolute;
+        background: linear-gradient(
+            270deg,
+            rgba(#fff, 90%),
+            rgba(darken(#fff, 20%), 60%)
+        );
+        inset: 0;
+
+        display: flex;
+        align-items: center;
+    }
+}
+
+.contenido-video{
+
+
+    z-index: 100;
+    h2{
+        color: v.$blanco;
+        font-size: 3rem;
+        margin: 0;
+        padding-bottom: 1rem;
+    }
+    p {
+        background-color: #5AB2FF;
+        display: inline;
+        padding: 1rem 1rem;
+        color: v.$blanco;
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 0;
+    }
+    @include m.telefono{
+        z-index: 100;
+        h2{
+            color: v.$blanco;
+            font-size: 7rem;
+            margin: 0;
+        }
+        p {
+            background-color: #5AB2FF;
+            display: inline;
+            padding: 1rem 2rem;
+            color: v.$blanco;
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+    }
+}
+
+.imagen-presentacion{
+    background-size: cover;
+}
